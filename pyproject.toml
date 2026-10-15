@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "backtesting-infrastructure"
+version = "0.1.0"
+description = "Shared data processing, engines, strategies, and analytics for backtesting"
+dependencies = ["pandas", "nautilus_trader"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["data_processing*", "engines*", "strategies*", "analytics*"]
+namespaces = false
